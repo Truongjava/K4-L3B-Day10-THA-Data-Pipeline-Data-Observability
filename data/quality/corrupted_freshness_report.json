@@ -1,0 +1,11 @@
+{
+  "generated_at": "2026-09-26T03:56:49.989776+00:00",
+  "threshold_days": 180,
+  "stale_ratio_limit": 0.25,
+  "latest_published": "2026-06-12",
+  "oldest_published": "2025-03-30",
+  "stale_rows": 10,
+  "total_rows": 23,
+  "stale_ratio": 0.4348,
+  "is_fresh": false
+}
