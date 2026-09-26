@@ -1,0 +1,67 @@
+{
+  "report_name": "test",
+  "generated_at": "2026-09-26T03:25:27.656424+00:00",
+  "gx_version": "1.18.0",
+  "row_count": 24,
+  "expected_row_count": 24,
+  "success": true,
+  "failed_checks": [],
+  "checks": [
+    {
+      "expectation": "ExpectTableRowCountToBeBetween",
+      "column": null,
+      "success": true,
+      "observed_value": 24,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0
+    },
+    {
+      "expectation": "ExpectColumnValuesToNotBeNull",
+      "column": "paper_id",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0
+    },
+    {
+      "expectation": "ExpectColumnValuesToBeUnique",
+      "column": "paper_id",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0
+    },
+    {
+      "expectation": "ExpectColumnValuesToNotBeNull",
+      "column": "title",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0
+    },
+    {
+      "expectation": "ExpectColumnValueLengthsToBeBetween",
+      "column": "title",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0
+    },
+    {
+      "expectation": "ExpectColumnValuesToNotBeNull",
+      "column": "summary",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0
+    },
+    {
+      "expectation": "ExpectColumnValueLengthsToBeBetween",
+      "column": "summary",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0
+    }
+  ]
+}
