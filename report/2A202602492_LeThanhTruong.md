@@ -9,7 +9,7 @@
 | Khóa/Lớp         | K4                                                                                                                                                                |
 | Tên nhóm         | THA                                                                                                                                                               |
 | Vai trò chính    | Data Cleaning & Data Observability                                                                                                                                |
-| Repository         | [github.com/Truongjava/K4-L3B-Day10-Data-Pipeline-Data-Observability.git](https://github.com/Truongjava/K4-L3B-Day10-Data-Pipeline-Data-Observability.git) |
+| Repository         | [github.com/Truongjava/K4-L3B-Day10-THA-Data-Pipeline-Data-Observability.git](https://github.com/Truongjava/K4-L3B-Day10-THA-Data-Pipeline-Data-Observability.git) |
 | Ngày hoàn thành | 2026-09-26                                                                                                                                                        |
 
 ## 2. Vai trò và phạm vi công việc
