@@ -7,7 +7,7 @@
 | Họ và tên       | Nguyễn Quang Huy                                                                                                                                                |
 | MSSV               | 2A202602461                                                                                                                                                       |
 | Khóa/Lớp         | K4                                                                                                                                                                |
-| Tên nhóm         | K4-L3-DAY10-DataPipeline                                                                                                                                                               |
+| Tên nhóm         | THA                                                                                                                                                               |
 | Vai trò chính    | Idempotent Repair & Observability Reporting (CP5, CP6)                                                                                                                                |
 | Repository         | [github.com/Truongjava/K4-L3B-Day10-THA-Data-Pipeline-Data-Observability.git](https://github.com/Truongjava/K4-L3B-Day10-THA-Data-Pipeline-Data-Observability.git) |
 | Ngày hoàn thành | 2026-09-26                                                                                                                                                        |

@@ -1,8 +1,8 @@
 # Danh Sách Thành Viên & Báo Cáo Phân Công Nhóm
 
-- **Tên Nhóm:** `Nhóm K4-L3-DAY10-DataPipeline`
-- **Mã Nhóm / Lớp:** `K4-L3-DAY10`
-- **Tên Repository Nộp Bài:** `K4-L3-DAY10-DataPipelineDataObservability`
+- **Tên Nhóm:** THA
+- **Mã Nhóm / Lớp:** `H201`
+- **Tên Repository Nộp Bài:** `K4-L3B-Day10-THA-Data-Pipeline-Data-Observability`
 
 ---
 
@@ -12,7 +12,7 @@
 |---:|---|---|---|---|---|---|
 | 1 | Lê Thanh Trường | 2A202602492 | | Trưởng nhóm (CP1, CP2) | `report/2A202602492_LeThanhTruong.md` | 100% |
 | 2 | Trần Hoàng Duy Anh | 2A202602558 | | Thành viên (CP3, CP4) | `report/2A202602558_TranHoangDuyAnh.md` | 100% |
-| 3 | Nguyễn Quang Huy | 2A202602461 | | Thành viên (CP5, CP6) | `report/individual_2A202602461_NguyenQuangHuy.md` | 100% |
+| 3 | Nguyễn Quang Huy | 2A202602461 | | Thành viên (CP5, CP6) | `report/2A202602461_NguyenQuangHuy.md` | 100% |
 
 ---
 
