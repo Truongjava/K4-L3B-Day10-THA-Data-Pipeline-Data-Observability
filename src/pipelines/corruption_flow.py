@@ -62,3 +62,61 @@ def main() -> None:
     print(f"Corrupted metrics: {settings.paths.corrupted_metrics}")
     print(f"Corrupted quality: {settings.paths.corrupted_quality_report}")
     print(f"Corrupted freshness: {freshness_path}")
+    
+    print("\\n--- Starting CP5 Idempotent Repair ---")
+    from ingestion.crossref import load_raw_records
+    from ingestion.cleaning import build_clean_dataframe
+    from observability.reporting import generate_corruption_report
+    from core.utils import now_utc
+    
+    # 1. Recover from raw data
+    raw_records = load_raw_records(settings.paths.raw_records_json)
+    repaired_df = build_clean_dataframe(raw_records, now_utc())
+    
+    write_csv(repaired_df, settings.paths.repaired_clean_csv)
+    write_json(settings.paths.repaired_clean_json, repaired_df.to_dict(orient="records"))
+    
+    # 2. Rebuild index
+    repaired_index = LocalEmbeddingIndex.build(
+        repaired_df,
+        settings,
+        embeddings_output_path=settings.paths.repaired_embeddings_json,
+    )
+    
+    # 3. Re-evaluate pipeline
+    repaired_evaluation = evaluate_pipeline(
+        settings=settings,
+        index=repaired_index,
+        test_set_path=settings.paths.eval_testset,
+        metrics_output_path=settings.paths.repaired_metrics,
+        answers_output_path=settings.paths.repaired_answers,
+    )
+    
+    # 4. Run quality checks
+    repaired_quality = run_data_quality_checks(repaired_df, settings, "repaired")
+    repaired_freshness_path = settings.paths.quality_dir / "repaired_freshness_report.json"
+    repaired_freshness = build_freshness_report(repaired_df, settings, repaired_freshness_path)
+    
+    # 5. Generate comparison report
+    generate_corruption_report(
+        settings.paths.comparison_report,
+        baseline_metrics=baseline_metrics,
+        corrupted_metrics=evaluation.summary,
+        repaired_metrics=repaired_evaluation.summary,
+        corrupted_quality=quality,
+        repaired_quality=repaired_quality,
+        corrupted_freshness=freshness,
+        repaired_freshness=repaired_freshness
+    )
+    
+    print("CP5 results (repaired vs corrupted):")
+    print(
+        "Retrieval hit rate: "
+        f"{evaluation.summary['retrieval_hit_rate']:.3f} -> "
+        f"{repaired_evaluation.summary['retrieval_hit_rate']:.3f}"
+    )
+    print(
+        f"Mean token F1: {evaluation.summary['mean_token_f1']:.3f} -> "
+        f"{repaired_evaluation.summary['mean_token_f1']:.3f}"
+    )
+    print(f"Comparison report: {settings.paths.comparison_report}")

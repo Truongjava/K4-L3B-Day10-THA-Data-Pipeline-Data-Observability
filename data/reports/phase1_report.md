@@ -1,6 +1,6 @@
 # Phase 1: Baseline Report
 
-Generated: 2026-09-26T03:56:18.801673+00:00
+Generated: 2026-09-26T04:19:15.486543+00:00
 
 ## Source
 - Input source: Local raw snapshot
@@ -18,11 +18,11 @@ Generated: 2026-09-26T03:56:18.801673+00:00
 | Mean token F1 | 1.0000 |
 | Judge accuracy | 1.0000 |
 | Mean judge score | 5 |
-| LLM provider | mock |
+| LLM provider | openrouter |
 | Ragas | Set RUN_RAGAS=1 to enable the slower Ragas pass. |
 
 ## Data Quality
-- Great Expectations version: 1.18.0
+- Great Expectations version: 1.23.2
 - Status: PASS
 - Rows checked: 24
 - Failed checks: None
